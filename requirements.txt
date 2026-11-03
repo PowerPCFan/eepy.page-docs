@@ -1,0 +1,2 @@
+zensical
+openapi-generator-cli

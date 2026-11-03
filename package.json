@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.4",
+    "tailwindcss": "^4.3.4"
+  },
+  "scripts": {
+    "tailwind:watch": "npx @tailwindcss/cli -i ./src/tailwind.css -o ./docs/stylesheets/tailwind.css --watch",
+    "tailwind:build": "npx @tailwindcss/cli -i ./src/tailwind.css -o ./docs/stylesheets/tailwind.css",
+    "openapi:generate": "curl http://localhost:8000/openapi.json -o openapi.json.temp && ./venv/bin/openapi-generator-cli generate -i openapi.json.temp -g markdown -o docs/api/generated && rm openapi.json.temp",
+    "openapi:generate-fromprod": "curl https://api.eepy.page/openapi.json -o openapi.json.temp && ./venv/bin/openapi-generator-cli generate -i openapi.json.temp -g markdown -o docs/api/generated && rm openapi.json.temp"
+  }
+}

@@ -1,0 +1,16 @@
+@layer theme, base, components, utilities;
+
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities) source("..");
+
+:root > * {
+    --md-primary-fg-color: #862ede;
+    --md-primary-fg-color--transparent: #862ede1a;
+    --md-accent-fg-color: #d561ff;
+    --md-accent-fg-color--transparent: #d561ff1a;
+}
+
+@theme inline {
+    --color-primary: var(--md-primary-fg-color);
+    --color-accent: var(--md-accent-fg-color);
+}
