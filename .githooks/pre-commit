@@ -1,0 +1,12 @@
+#!/bin/sh
+
+npx @tailwindcss/cli -i ./src/tailwind.css -o ./docs/stylesheets/tailwind.css
+status=$?
+
+if [ $status -ne 0 ]; then
+    echo "Tailwind compilation failed. Commit aborted."
+    exit $status
+fi
+
+git add ./docs/stylesheets/tailwind.css
+echo "Tailwind compiled and staged successfully."

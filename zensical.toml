@@ -10,24 +10,8 @@ repo_url = "https://github.com/PowerPCFan/eepy.page"
 repo_name = "PowerPCFan/eepy.page"
 # edit_uri = "edit/main/docs/"
 
-# nav = [
-#   "index.md",
-#   { "Guides" = [
-#     "guides/index.md",
-#     "guides/getting-started.md",
-#     "guides/configuration.md",
-#     "guides/deployment.md",
-#   ] },
-#   { "API Documentation" = [
-#     "api/index.md",
-#     "api/authentication.md",
-#     "api/endpoints.md",
-#     "api/responses.md",
-#   ] },
-#]
-
 extra_css = ["stylesheets/tailwind.css"]
-# extra_javascript = ["javascripts/extra.js"]
+extra_javascript = ["assets/js/script.js"]
 
 [project.theme]
 # variant = "classic"
@@ -40,7 +24,7 @@ features = [
   # "content.action.view",
   "content.code.annotate",
   "content.code.copy",
-  "content.code.select",
+  # "content.code.select",
   "content.footnote.tooltips",
   "content.tabs.link",
   "content.tooltips",
@@ -63,12 +47,12 @@ features = [
   # "toc.integrate",
 ]
 
-# logo = "assets/logo.png"
+logo = "assets/images/favicon.png"
 
 # [project.theme.icon]
-# logo = "lucide/smile"
+# logo = "lucide/book-open-text"
 
-# [project.theme.font]
+[project.theme.font]
 text = "Inter"
 code = "Jetbrains Mono"
 
@@ -131,3 +115,4 @@ pymdownx.tabbed.alternate_style = true
 pymdownx.tabbed.combine_header_slug = true
 pymdownx.tasklist.custom_checkbox = true
 pymdownx.tilde = {}
+"zensical.extensions.macros" = { enabled = true, module_name = "macros" }
